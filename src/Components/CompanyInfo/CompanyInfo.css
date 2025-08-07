@@ -1,0 +1,183 @@
+.company-info-page {
+  background: linear-gradient(to right, #fff8dc, #fffde7);
+  min-height: 100vh;
+  padding: 60px 10%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Main content */
+.company-info {
+  max-width: 800px;
+  color: #333;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Heading */
+.company-info h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #b85c00; /* 🟠 rich orange */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  border-bottom: 3px solid #ffc107; /* 🌟 golden border */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.company-info h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333333; /* ✅ dark text, readable */
+  margin-top: 5px;
+}
+
+
+/* Info Cards */
+.info-card {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px 0; /* ✅ Left-aligned */
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+
+.info-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Vibrating Call Button */
+@keyframes vibrate {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+
+.call-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  animation: vibrate 0.4s infinite;
+}
+
+.call-btn:hover {
+  background-color: #218838;
+}
+
+/* ✅ Responsive for mobile */
+@media (max-width: 768px) {
+  .company-info {
+    text-align: center;
+  }
+
+  .company-info h1 {
+    font-size: 30px;
+  }
+
+  .company-info h2 {
+    font-size: 20px;
+    padding: 10px 16px;
+  }
+
+  .call-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+.company-description {
+  font-size: 18px;
+  margin: 20px auto;
+  line-height: 1.6;
+  max-width: 700px;
+  color: #444;
+  background-color: #fef9e7;
+  padding: 20px;
+  border-left: 5px solid #28a745;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.company-info-page-split {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.map-heading {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f46a1a; /* or #b85c00 to match */
+  margin-top: 50px;
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+
+.company-info-content {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.company-map {
+  flex: 1;
+  min-width: 300px;
+  max-width: 380px;
+  text-align: center;
+}
+
+.get-direction-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #ffc107;
+  color: #000000;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: background 0.3s ease;
+    animation: vibrate 0.4s infinite; 
+
+}
+
+.get-direction-btn:hover {
+  background-color: #e0a800;
+}
+.company-image-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.company-image {
+  max-width: 90%;
+  height: auto;
+  margin-top: 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+
+
+
