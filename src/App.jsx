@@ -12,46 +12,48 @@ function App() {
 
   return (
     <div className="container">
-      <Navbar
-        onContactClick={() => {
-          setShowModal(true);
-          setActivePage('contact');
-        }}
-        activePage={activePage}
-        setActivePage={(page) => {
-          setActivePage(page);
-          if (page !== 'contact') {
-            setShowModal(false);
-          }
-        }}
-      />
-
-      {/* ✅ Render different components based on activePage */}
-      {activePage === 'home' && <Hero />}
-      {activePage === 'products' && <ProductInfo />}
-
-      {/* ✅ Contact Modal only shows when clicked */}
-      {showModal && (
-        <ContactModal
-          onClose={() => {
-            setShowModal(false);
-            setActivePage('home');
+      {/* ✅ Only show Navbar when Contact is NOT active */}
+      {activePage !== 'contact' && (
+        <Navbar
+          onContactClick={() => {
+            setShowModal(true);
+            setActivePage('contact');
+          }}
+          activePage={activePage}
+          setActivePage={(page) => {
+            setActivePage(page);
+            if (page !== 'contact') {
+              setShowModal(false);
+            }
           }}
         />
       )}
+
+      {/* ✅ Render pages */}
+      {activePage === 'home' && <Hero />}
+      {activePage === 'products' && <ProductInfo />}
       {activePage === 'company' && <CompanyInfo />}
 
+      {/* ✅ Show Contact Modal when active */}
+      {showModal && activePage === 'contact' && (
+        <ContactModal
+          onClose={() => {
+            setShowModal(false);
+            setActivePage('home'); // return to home after closing
+          }}
+        />
+      )}
 
-      {/* ✅ Single Footer only */}
-      <Footer
-        setActivePage={(page) => {
-          setActivePage(page);
-          if (page !== 'contact') setShowModal(false);
-        }}
-        setShowModal={setShowModal}
-      />
-
-
+      {/* ✅ Only show footer if not in contact modal */}
+      {activePage !== 'contact' && (
+        <Footer
+          setActivePage={(page) => {
+            setActivePage(page);
+            if (page !== 'contact') setShowModal(false);
+          }}
+          setShowModal={setShowModal}
+        />
+      )}
     </div>
   );
 }

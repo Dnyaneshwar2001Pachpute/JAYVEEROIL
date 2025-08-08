@@ -16,22 +16,26 @@
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* ✅ Start at top instead of center */
+  overflow-y: auto; /* ✅ Allow scrolling on mobile */
+  padding: 20px; /* Some space on top/bottom */
   z-index: 999;
 }
 
 .contact-box {
   background: #fff;
   border-radius: 20px;
-  padding: 40px;
-  width: 90%;
+  padding: 20px; /* Reduce for small screens */
+  width: 100%; /* ✅ Full width on mobile */
   max-width: 480px;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: auto; /* ✅ Let content decide height */
 }
+
 
 .contact-box h2 {
   font-size: 24px;
@@ -89,4 +93,10 @@
 
 .close-btn:hover {
   background-color: #c82333;
+}
+@media (max-width: 600px) {
+  .contact-box {
+    padding: 15px;
+    border-radius: 15px;
+  }
 }
