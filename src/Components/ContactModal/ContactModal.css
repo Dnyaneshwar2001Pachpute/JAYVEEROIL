@@ -16,11 +16,12 @@
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* ✅ Start at top instead of center */
-  overflow-y: auto; /* ✅ Allow scrolling on mobile */
-  padding: 20px; /* Some space on top/bottom */
+  align-items: center; /* ✅ Center vertically */
+  padding: 20px;
   z-index: 999;
+  overflow-y: auto; /* ✅ Allow scrolling if needed */
 }
+
 
 .contact-box {
   background: #fff;
@@ -94,9 +95,24 @@
 .close-btn:hover {
   background-color: #c82333;
 }
+
+/* 📱 Mobile screens */
 @media (max-width: 600px) {
+  .contact-overlay {
+    align-items: flex-start; /* Start near top */
+    padding-top: 50px;
+  }
   .contact-box {
     padding: 15px;
     border-radius: 15px;
+  }
+}
+/* 📟 Tablet screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .contact-overlay {
+    align-items: center; /* Keep centered */
+  }
+  .contact-box {
+    max-width: 600px;
   }
 }
