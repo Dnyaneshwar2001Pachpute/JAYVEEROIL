@@ -79,7 +79,9 @@
 /* ✅ Responsive for mobile */
 @media (max-width: 768px) {
   .company-info {
-    text-align: left;
+   text-align: center; /* keep center on mobile */
+    margin: 0 auto;     /* ensures horizontal center */
+    padding: 0 10px;    /* small side padding */    
   }
 
   .company-info h1 {
