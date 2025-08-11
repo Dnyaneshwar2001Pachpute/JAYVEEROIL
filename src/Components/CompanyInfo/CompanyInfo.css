@@ -79,7 +79,7 @@
 /* ✅ Responsive for mobile */
 @media (max-width: 768px) {
   .company-info {
-    text-align: center;
+    text-align: left;
   }
 
   .company-info h1 {
@@ -179,5 +179,45 @@
 }
 
 
+/* 📱 Extra small devices */
+@media (max-width: 480px) {
+  .company-info h1 {
+    font-size: 24px;
+  }
+
+  .company-info h2 {
+    font-size: 16px;
+  }
+
+  .company-description {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .company-info-page-split {
+    padding: 20px;
+  }
+
+  .company-image {
+    margin-top: 20px;
+  }
+}
+
+/* 📱 Tablet optimization */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .company-info h1 {
+    font-size: 36px;
+  }
+
+  .company-info h2 {
+    font-size: 22px;
+  }
+
+  .company-info-page-split {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+}
 
 
